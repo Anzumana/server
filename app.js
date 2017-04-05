@@ -52,7 +52,7 @@ var anzumana = createVirtualHost("www.anzumana." + domainEnding, "sites/public_h
 var hub = createVirtualHost("hub.anzumana."+domainEnding, "sites/ContentHub/");
 var overwatch = createVirtualHost("overwatch.anzumana."+domainEnding, "sites/overwatch/");
 var blog = createVirtualHost("blog.anzumana.de"+domainEnding, "sites/blog/");
-var internIp = createVirtualHost("192.168.150.148","anzumana/");
+var internIp = createVirtualHost("139.59.153.112","anzumana/");
 sites =[anzumana,hub,overwatch,blog,internIp];
 for(var i = 0; i< sites.length;i++){
 	app.use(sites[i]);
