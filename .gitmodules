@@ -1,0 +1,9 @@
+[submodule "sites/ContentHub"]
+	path = sites/ContentHub
+	url = https://github.com/Anzumana/ContentHub.git
+[submodule "sites/public_html"]
+	path = sites/public_html
+	url = https://github.com/Anzumana/public_html
+[submodule "sites/overwatch"]
+	path = sites/overwatch
+	url = https://github.com/Anzumana/overwatch
