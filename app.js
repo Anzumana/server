@@ -1,7 +1,7 @@
 /////// variable definitions ////////
 var port = 80;
 var app;
-var local= false;
+var local= true;
 var DomainEnding;
 if(local){
 	domainEnding="de";
@@ -25,13 +25,6 @@ var vhost = require('vhost');
 //Compression for gzip Compression
 var compression = require('compression');
 
-/**
- * sendEmail
- * @param subject string mail subject line
- * @param email string recipient email adress
- * @param content string body of the email
- *
- */
 function createVirtualHost(domainName, dirPath) {
   return vhost(domainName, express.static(dirPath));
 }
@@ -51,12 +44,14 @@ app.use(bodyParser.urlencoded({extended: true}));
 var anzumana = createVirtualHost("www.anzumana." + domainEnding, "sites/public_html/");
 var hub = createVirtualHost("hub.anzumana."+domainEnding, "sites/ContentHub/");
 var overwatch = createVirtualHost("overwatch.anzumana."+domainEnding, "sites/overwatch/");
-var blog = createVirtualHost("blog.anzumana.de"+domainEnding, "sites/blog/");
-var internIp = createVirtualHost("139.59.153.112","sites/public_html/");
-sites =[anzumana,hub,overwatch,blog,internIp];
+var blog = createVirtualHost("www.blog.anzumana.de"+domainEnding, "sites/blog/");
+var internIp = createVirtualHost("127.0.0.1","sites/public_html/");
+var redesign = createVirtualHost("redesign.anzumana."+domainEnding,"sites/anzumana-com/dist/");
+sites =[anzumana,hub,overwatch,blog,internIp,redesign];
 for(var i = 0; i< sites.length;i++){
 	app.use(sites[i]);
 }
+
 
 //enable the port that the app is listening on
 app.listen(port, function () {
