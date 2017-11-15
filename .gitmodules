@@ -16,3 +16,6 @@
 [submodule "sites/sites/dance-community"]
 	path = sites/sites/dance-community
 	url = http://github.com/Anzumana/dance_community
+[submodule "sites/dance-community"]
+	path = sites/dance-community
+	url = http://github.com/Anzumana/dance_community
