@@ -7,3 +7,6 @@
 [submodule "sites/overwatch"]
 	path = sites/overwatch
 	url = https://github.com/Anzumana/overwatch
+[submodule "sites/react-app"]
+	path = sites/react-app
+	url = https://github.com/Anzumana/react-app
