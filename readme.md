@@ -1,4 +1,5 @@
-[![BrowserStack Status](https://www.browserstack.com/automate/badge.svg?badge_key=<badge_key>)](https://www.browserstack.com/automate/public-build/<badge_key>)
+[![BrowserStack Status](https://www.browserstack.com/automate/badge.svg?badge_key=<badge_key>)](https://www.browserstack.com/automate/public-build/<badge_key>)  
+
 For all the websites that i can open source here you can find the code for it.  
 Each website is its own git submodule.   
 Feel free to explore the code.  
